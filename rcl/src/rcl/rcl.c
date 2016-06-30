@@ -126,6 +126,13 @@ rcl_ok()
   return rcl_atomic_load_bool(&__rcl_is_initialized);
 }
 
+int
+rcl_get_argv(char *** argv)
+{
+  *argv = __rcl_argv;
+  return __rcl_argc;
+}
+
 #if __cplusplus
 }
 #endif

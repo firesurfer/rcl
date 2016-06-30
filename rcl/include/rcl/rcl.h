@@ -121,6 +121,16 @@ RCL_WARN_UNUSED
 bool
 rcl_ok(void);
 
+/// Return true if rcl is currently initialized, otherwise false.
+/* \param[out] argv the address of a copy of argv will be assigned here
+ * \return The number of arguments in argv (i.e., argc).
+ * Do not modify the contents of argv.
+ */
+RCL_PUBLIC
+RCL_WARN_UNUSED
+int
+rcl_get_argv(char *** argv);
+
 #if __cplusplus
 }
 #endif
